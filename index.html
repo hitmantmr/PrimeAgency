@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Agency | Premium Custom Veb Sajtovi i Dizajn</title>
+    
+    <!-- Primarna SEO optimizacija -->
+    <meta name="description" content="Prime Agency - Izrađujemo brze, sigurne i unikatne custom veb sajtove koji se savršeno kotiraju na Guglu i donose ozbiljan profit vašem biznisu.">
+    <meta name="keywords" content="izrada sajtova, custom sajtovi, veb dizajn, programiranje sajtova, beograd, srbija, brzi sajtovi, e-commerce prodavnica, seo optimizacija">
+    <meta name="author" content="Prime Agency">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://primeagency.rs/">
+    <meta property="og:title" content="Prime Agency | Premium Custom Veb Sajtovi">
+    <meta property="og:description" content="Izrađujemo brze, sigurne i unikatne custom veb sajtove koji se savršeno kotiraju na Guglu i donose ozbiljan profit vašem biznisu.">
+    <meta property="og:image" content="assets/watch-shop.png">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=48">
+</head>
+<body>
+
+    <!-- Scroll Sentinel za optimizovanu detekciju skrola bez JS lagovanja -->
+    <div id="scroll-sentinel" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; visibility: hidden; pointer-events: none;"></div>
+
+
+
+    <!-- Gornji Sticky Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <div class="logo-wrapper">
+                <a href="#hero" class="logo" id="nav-logo">
+                    <svg class="logo-mark" width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#71717a" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="46" stroke="url(#logo-grad)" stroke-width="4" fill="none" opacity="0.2"/>
+                        <path d="M35 75V25" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" />
+                        <path d="M35 25H52C62 25 66 33 66 41C66 49 62 50 52 50H35" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M46 50L62 75" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" />
+                        <path d="M35 60H53" stroke="url(#logo-grad)" stroke-width="6" stroke-linecap="round" />
+                    </svg>
+                    PRIME<span>AGENCY</span><span class="dot">.</span>
+                </a>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Početna</a>
+                <a href="#usluge" class="nav-link">Usluge</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#kalkulator" class="nav-link">Kalkulator</a>
+                <a href="#proces" class="nav-link">Proces</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#kontakt" class="nav-link">Kontakt</a>
+            </nav>
+
+            <div class="navbar-actions">
+                <a href="#kontakt" class="btn btn-primary btn-nav-cta">Zatraži Ponudu</a>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Otvori meni">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Glavni sadržaj -->
+    <main class="main-content">
+
+        <!-- Početna Sekcija (Hero) -->
+        <section class="tab-panel hero active" id="hero">
+            <div class="container hero-container">
+                <!-- Leva kolona (Tekst i CTA) -->
+                <div class="hero-content">
+                    <div class="hero-badges scroll-reveal" style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span class="status-indicator-text">Otvoreno za saradnju</span>
+                        </div>
+                        <div class="badge" style="margin-bottom: 0;">SAJTOVI KOJI DONOSE OZBILJAN PROFIT</div>
+                    </div>
+                    <h1 class="hero-title scroll-reveal">
+                        Vaš biznis zaslužuje <span class="text-gradient-violet">sajt koji prodaje</span>.
+                    </h1>
+                    <p class="hero-subtitle scroll-reveal">
+                        Moderni i brzi web sajtovi koji ostavljaju profesionalan utisak, povećavaju poverenje klijenata i pretvaraju posetioce u kupce.
+                    </p>
+                    <div class="hero-btns scroll-reveal">
+                        <a href="#kontakt" class="btn btn-primary">
+                            Zatraži Ponudu <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                        <a href="#portfolio" class="btn btn-secondary">
+                            Pogledaj Radove
+                        </a>
+                    </div>
+                    <div class="hero-stats scroll-reveal">
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Ručni Kod</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">&lt; 1.0s</span>
+                            <span class="stat-label">Brzina učitavanja</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100/100</span>
+                            <span class="stat-label">Google PageSpeed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desna kolona (Interaktivni Mockup sa preklapajućim staklenim karticama) -->
+                <div class="hero-visual scroll-reveal" id="hero-visual-container">
+                    <!-- Glavna kartica (Mockup brauzera) -->
+                    <div class="browser-mockup" id="browser-tilt">
+                        <div class="browser-header">
+                            <span class="browser-dot dot-red"></span>
+                            <span class="browser-dot dot-yellow"></span>
+                            <span class="browser-dot dot-green"></span>
+                            <div class="browser-url">primeagency.rs</div>
+                        </div>
+                        <div class="browser-body">
+                            <div class="score-circle">
+                                <div class="score-inner">
+                                    <span class="score-num">100</span>
+                                    <div class="score-label">Speed</div>
+                                </div>
+                            </div>
+                            <div class="mock-stats">
+                                <div class="mock-stat-row">
+                                    <span class="mock-stat-label">Performance</span>
+                                    <span class="mock-stat-val" style="color: var(--accent);">100%</span>
+                                </div>
+                                <div class="mock-stat-bar"><div class="mock-stat-fill" style="width: 100%; background: var(--accent);"></div></div>
+                                
+                                <div class="mock-stat-row" style="margin-top: 8px;">
+                                    <span class="mock-stat-label">SEO score</span>
+                                    <span class="mock-stat-val" style="color: var(--accent);">100%</span>
+                                </div>
+                                <div class="mock-stat-bar"><div class="mock-stat-fill" style="width: 100%; background: var(--accent);"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 1: PageSpeed (Preklapa donji levi deo) -->
+                    <div class="floating-widget widget-speed" id="widget-speed">
+                        <div class="widget-icon green-glow"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="widget-info">
+                            <h4>Google PageSpeed</h4>
+                            <div class="widget-status">
+                                <span class="pulse-dot"></span>
+                                <span class="status-text">100/100 Odlično</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 2: Uptime / SEO Graph (Preklapa gornji desni deo) -->
+                    <div class="floating-widget widget-chart" id="widget-chart">
+                        <div class="widget-header">
+                            <h4>Uptime & SEO</h4>
+                            <span class="badge-percentage">100%</span>
+                        </div>
+                        <div class="mini-chart">
+                            <span class="chart-bar" style="height: 40%"></span>
+                            <span class="chart-bar" style="height: 60%"></span>
+                            <span class="chart-bar" style="height: 75%"></span>
+                            <span class="chart-bar" style="height: 90%"></span>
+                            <span class="chart-bar" style="height: 100%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sekcija Rezultati -->
+            <div class="results-bar scroll-reveal">
+                <div class="container">
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-val-wrapper">
+                                <span class="result-number" data-target="15">0</span><span class="result-plus">+</span>
+                            </div>
+                            <p class="result-label">Projekata</p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-val-wrapper">
+                                <span class="result-number" data-target="100">0</span><span class="result-plus">%</span>
+                            </div>
+                            <p class="result-label">Zadovoljnih Klijenata</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-number-special">&lt;1s</span>
+                            <p class="result-label">Učitavanje</p>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-number-special">24/7</span>
+                            <p class="result-label">Podrška</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Usluge Sekcija -->
+        <section class="tab-panel" id="usluge">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">NAŠE USLUGE</div>
+                    <h2 class="section-title">Šta nudimo klijentima</h2>
+                    <p class="section-subtitle">Naš fokus je na razvoju custom rešenja koja nemaju ograničenja u performansama i dizajnu.</p>
+                </div>
+                
+                <div class="bento-grid">
+                    <!-- Velika bento kartica (Sajtovi koji donose klijente) -->
+                    <div class="bento-card bento-large scroll-reveal">
+                        <div>
+                            <div class="bento-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3 class="bento-title">Sajtovi Koji Donose Nove Klijente</h3>
+                            <p class="bento-desc">
+                                Ne kreiramo samo lepe stranice na internetu. Naš fokus je na razvoju sajtova koji imaju jasnu prodajnu strukturu, profesionalni dizajn koji uliva poverenje i optimizovane pozive na akciju koji pretvaraju obične posmatrače u vaše verne kupce. Svaki element je strateški postavljen da poveća vaš profit.
+                             </p>
+                            <div class="bento-tech-tags">
+                                <span class="tech-tag">Prodajni Levak</span>
+                                <span class="tech-tag">Poverenje Kupaca</span>
+                                <span class="tech-tag">Visoka Konverzija</span>
+                                <span class="tech-tag">Profesionalni Utisak</span>
+                            </div>
+                        </div>
+                        <div class="bento-interactive-snippet">
+                            <span style="color: #6366f1;">const</span> nasSajt = {<br>
+                            &nbsp;&nbsp;noviKlijenti: <span style="color: #10b981;">'Konstantan Rast'</span>,<br>
+                            &nbsp;&nbsp;poverenjeKupaca: <span style="color: #38bdf8;">'Maksimalno'</span>,<br>
+                            &nbsp;&nbsp;profesionalniUtisak: <span style="color: #38bdf8;">'100%'</span><br>
+                            };
+                        </div>
+                    </div>
+
+                    <!-- Mala kartica (Landing Pages) -->
+                    <div class="bento-card scroll-reveal">
+                        <div>
+                            <div class="bento-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h3 class="bento-title">Landing Stranice Za Brzu Prodaju</h3>
+                            <p class="bento-desc">
+                                Jednostrane web prezentacije kreirane specifično za vaše Google ili Instagram reklame. Strukturirane tako da odmah privuku pažnju i podstaknu klijente da vas kontaktiraju ili ostave svoje podatke.
+                            </p>
+                        </div>
+                        <div class="bento-price-tag">
+                            <span>Investicija</span>
+                            <strong>od 400€</strong>
+                        </div>
+                    </div>
+
+                    <!-- Mala kartica (E-commerce) -->
+                    <div class="bento-card scroll-reveal">
+                        <div>
+                            <div class="bento-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <h3 class="bento-title">E-Commerce Prodavnice</h3>
+                            <p class="bento-desc">
+                                Brze i bezbedne online prodavnice sa jednostavnim procesom kupovine koji smanjuje napuštanje korpe. Omogućite klijentima da kupuju 24/7 na sajtu koji uliva maksimalnu sigurnost.
+                            </p>
+                        </div>
+                        <div class="bento-price-tag">
+                            <span>Investicija</span>
+                            <strong>od 1500€</strong>
+                        </div>
+                    </div>
+
+                    <!-- Široka bento kartica (Google PageSpeed / SEO) -->
+                    <div class="bento-card bento-wide scroll-reveal">
+                        <div>
+                            <div class="bento-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                            <h3 class="bento-title">Prva Pozicija na Google-u & Optimizacija Brzine</h3>
+                            <p class="bento-desc">
+                                Sajt koji niko ne može da nađe na Google-u ne donosi novac. Naši projekti se učitavaju munjevito, što Google izuzetno ceni i nagrađuje višim pozicijama u pretrazi. Bolji rang znači više organskih (besplatnih) poseta i manju cenu plaćenog oglašavanja.
+                            </p>
+                        </div>
+                        <div class="bento-price-tag">
+                            <span>Brzina učitavanja</span>
+                            <strong style="color: var(--accent);">Zelena Zona (ispod 1 sekunde)</strong>
+                        </div>
+                    </div>
+
+                    <!-- Mala kartica (Poslovni sajtovi) -->
+                    <div class="bento-card scroll-reveal">
+                        <div>
+                            <div class="bento-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h3 class="bento-title">Profesionalni Sajtovi Za Firme</h3>
+                            <p class="bento-desc">
+                                Luksuzne i ozbiljne prezentacije za kompanije koje žele da izgrade kredibilitet na tržištu. Pokažite svoje reference, klijente i stručnost na nivou koji opravdava vaše cene i privlači premium klijente.
+                            </p>
+                        </div>
+                        <div class="bento-price-tag">
+                            <span>Investicija</span>
+                            <strong>od 800€</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sekcija Zašto PrimeAgency? -->
+                <div class="why-prime-section scroll-reveal" style="margin-top: 80px;">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <div class="badge">ZAŠTO IZABRATI NAS</div>
+                        <h2 class="section-title">Zašto PrimeAgency?</h2>
+                        <p class="section-subtitle">Ne pravimo samo lepe sajtove. Pravimo digitalne alate koji pomažu vašem biznisu da raste.</p>
+                    </div>
+                    
+                    <div class="why-grid">
+                        <!-- Kartica 1: Brza Izrada -->
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <h3 class="why-title">Brza Izrada</h3>
+                            <p class="why-desc">Većina projekata završena za 7-14 dana.</p>
+                        </div>
+                        
+                        <!-- Kartica 2: Mobilna Optimizacija -->
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h3 class="why-title">Mobilna Optimizacija</h3>
+                            <p class="why-desc">Svaki sajt je prilagođen za sve ekrane (telefon, tablet, desktop).</p>
+                        </div>
+                        
+                        <!-- Kartica 3: Google Optimizacija -->
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <h3 class="why-title">Google Optimizacija (SEO)</h3>
+                            <p class="why-desc">Tehnička optimizacija koda kako bi vas klijenti lakše pronašli.</p>
+                        </div>
+                        
+                        <!-- Kartica 4: Laka Izmena -->
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fa-solid fa-sliders"></i></div>
+                            <h3 class="why-title">Laka Izmena</h3>
+                            <p class="why-desc">Mogućnost da sami menjate tekstove i slike bez programera.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- Portfolio Sekcija -->
+        <section class="tab-panel" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">PORTFOLIO</div>
+                    <h2 class="section-title">Izabrani Radovi</h2>
+                    <p class="section-subtitle">Pregledajte neke od naših premium dizajna i rešenja koja smo osmislili i razvili.</p>
+                </div>
+
+                <!-- Filteri -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Sve</button>
+                    <button class="filter-btn" data-filter="landing">Landing</button>
+                    <button class="filter-btn" data-filter="business">Poslovni</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                </div>
+
+                <!-- Grid sa radovima -->
+                <div class="portfolio-grid">
+                    <!-- Rad 1: Frizerski Salon -->
+                    <div class="portfolio-item scroll-reveal" data-category="landing">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/hair-salon.png" alt="Studio Aura - Salon Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Landing Stranica</span>
+                                <h3 class="portfolio-item-title">Studio Aura</h3>
+                                <p class="portfolio-desc">Moderna landing stranica za frizerski salon sa integrisanim sistemom zakazivanja termina.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 2: Autoperionica -->
+                    <div class="portfolio-item scroll-reveal" data-category="business">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/car-wash.png" alt="Glow & Go - Detailing Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Poslovni Sajt</span>
+                                <h3 class="portfolio-item-title">Glow & Go Detailing</h3>
+                                <p class="portfolio-desc">Sajt za profesionalnu auto kozmetiku i detailing vozila sa preglednim cenovnikom usluga.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 3: Advokat -->
+                    <div class="portfolio-item scroll-reveal" data-category="business">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/law-firm.png" alt="Advokat Marić - Advokatska Kancelarija Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Poslovni Sajt</span>
+                                <h3 class="portfolio-item-title">Advokat Marić & Partneri</h3>
+                                <p class="portfolio-desc">Elegantan i ozbiljan korporativni sajt za advokatsku kancelariju koji uliva maksimalno poverenje.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 4: Teretana -->
+                    <div class="portfolio-item scroll-reveal" data-category="landing">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/gym.png" alt="Apex Fitness - Teretana Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Landing Stranica</span>
+                                <h3 class="portfolio-item-title">Apex Fitness</h3>
+                                <p class="portfolio-desc">Dinamična i brza landing stranica sa rasporedom grupnih treninga i online prijavom.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 5: Restoran -->
+                    <div class="portfolio-item scroll-reveal" data-category="ecommerce">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/restaurant.png" alt="Monolith - Restoran Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">E-Commerce / Prezentacija</span>
+                                <h3 class="portfolio-item-title">Monolith Fine Dining</h3>
+                                <p class="portfolio-desc">Premium veb-prezentacija sa digitalnim jelovnikom i integrisanom formom za rezervaciju stolova.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rad 6: Građevinska Firma -->
+                    <div class="portfolio-item scroll-reveal" data-category="business">
+                        <div class="portfolio-img-wrapper">
+                            <img src="assets/construction.png" alt="Kontura Construction - Građevina Mockup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Poslovni Sajt</span>
+                                <h3 class="portfolio-item-title">Kontura Construction</h3>
+                                <p class="portfolio-desc">Ozbiljan sajt za građevinsku firmu sa portfoliom projekata, referencama i licencama.</p>
+                                <a href="#kontakt" class="portfolio-link">Pogledaj Projekat <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- Interaktivni Kalkulator Cena -->
+        <section class="tab-panel" id="kalkulator">
+            <div class="container">
+                <!-- Sekcija: Šta dobijate uz svaki projekat -->
+                <div class="included-features scroll-reveal" style="margin-bottom: 60px;">
+                    <div class="section-header" style="margin-bottom: 30px;">
+                        <div class="badge">STANDARDNI PAKET</div>
+                        <h2 class="section-title">Šta dobijate uz svaki projekat</h2>
+                        <p class="section-subtitle">Ove opcije su podrazumevano uključene u cenu svakog sajta bez ikakve doplate.</p>
+                    </div>
+                    
+                    <div class="included-grid">
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Responsive Dizajn</h4>
+                                <p>Sajt prilagođen za sve ekrane (mobilni, tablet i desktop).</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Kontakt Formu</h4>
+                                <p>Jednostavan način da vas novi klijenti kontaktiraju direktno.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>SSL Sertifikat</h4>
+                                <p>Sigurna veza (https) koja štiti sajt i povećava poverenje kupaca.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>SEO Optimizaciju</h4>
+                                <p>Osnovna optimizacija koda kako bi Google lakše indeksirao sajt.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Google Maps Integraciju</h4>
+                                <p>Prikaz lokacije vašeg biznisa na mapi radi lakšeg pronalaženja.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Društvene Mreže</h4>
+                                <p>Povezivanje sajta sa vašim Instagram, Facebook ili LinkedIn profilima.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Optimizaciju Brzine</h4>
+                                <p>Čist kod koji se učitava momentalno za bolje korisničko iskustvo.</p>
+                            </div>
+                        </div>
+                        <div class="included-card">
+                            <div class="included-check">✓</div>
+                            <div>
+                                <h4>Profesionalni Dizajn</h4>
+                                <p>Dizajn prilagođen vašoj branši koji vas izdvaja od konkurencije.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <div class="badge">INTERAKTIVNA PROCENA</div>
+                    <h2 class="section-title">Kalkulator Cena</h2>
+                    <p class="section-subtitle">Sami izaberite opcije i odmah saznajte procenjenu cenu i vreme izrade vašeg novog sajta.</p>
+                </div>
+
+                <div class="kalkulator-wrapper">
+                    <!-- Kontrole kalkulatora -->
+                    <div class="kalkulator-form">
+                        <!-- Tip sajta -->
+                        <div class="calc-group">
+                            <label class="calc-label">Tip Veb Sajta</label>
+                            <div class="calc-type-grid">
+                                <div class="calc-type-card active" data-type="landing" data-base-price="400" data-base-days="7">
+                                    <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                                    <h4>Landing Stranica</h4>
+                                    <p>Od 400€</p>
+                                </div>
+                                <div class="calc-type-card" data-type="business" data-base-price="800" data-base-days="14">
+                                    <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                    <h4>Poslovni Sajt</h4>
+                                    <p>Od 800€</p>
+                                </div>
+                                <div class="calc-type-card" data-type="ecommerce" data-base-price="1500" data-base-days="25">
+                                    <div class="card-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                                    <h4>E-Commerce</h4>
+                                    <p>Od 1500€</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Broj stranica -->
+                        <div class="calc-group" id="pages-slider-group">
+                            <div class="calc-label-wrapper">
+                                <label class="calc-label">Broj Stranica</label>
+                                <span class="calc-value" id="pages-count">3</span>
+                            </div>
+                            <input type="range" min="1" max="15" value="3" class="calc-slider" id="pages-range">
+                            <span class="calc-note">* Tipičan sajt ima između 3 i 7 stranica. Osnovna cena pokriva do 3 stranice, svaka sledeća je +50€.</span>
+                        </div>
+
+                        <!-- Dodatne opcije -->
+                        <div class="calc-group">
+                            <label class="calc-label">Dodatne Opcije</label>
+                            <div class="calc-options">
+                                <!-- Opcija 1 -->
+                                <label class="calc-checkbox-wrapper">
+                                    <input type="checkbox" id="opt-animations" data-price="150" data-days="2">
+                                    <span class="calc-checkbox"></span>
+                                    <span class="option-details">
+                                        <span class="option-title">Premium Animacije (+150€)</span>
+                                        <span class="option-desc">Glatki prelazi, hover efekti i mikro-interakcije.</span>
+                                    </span>
+                                </label>
+                                <!-- Opcija 2 -->
+                                <label class="calc-checkbox-wrapper">
+                                    <input type="checkbox" id="opt-seo" data-price="200" data-days="3">
+                                    <span class="calc-checkbox"></span>
+                                    <span class="option-details">
+                                        <span class="option-title">Napredni SEO Paket (+200€)</span>
+                                        <span class="option-desc">Istraživanje ključnih reči, optimizacija meta tagova i brzine.</span>
+                                    </span>
+                                </label>
+                                <!-- Opcija 3 -->
+                                <label class="calc-checkbox-wrapper">
+                                    <input type="checkbox" id="opt-multilang" data-price="150" data-days="4">
+                                    <span class="calc-checkbox"></span>
+                                    <span class="option-details">
+                                        <span class="option-title">Višejezičnost (+150€ / jezik)</span>
+                                        <span class="option-desc">Sajt preveden na više jezika radi globalne vidljivosti.</span>
+                                    </span>
+                                </label>
+                                <!-- Opcija 4 -->
+                                <label class="calc-checkbox-wrapper">
+                                    <input type="checkbox" id="opt-form" data-price="50" data-days="1">
+                                    <span class="calc-checkbox"></span>
+                                    <span class="option-details">
+                                        <span class="option-title">Napredna Forma za Upit/Zakazivanje (+50€)</span>
+                                        <span class="option-desc">Custom forma sa validacijom i direktnim slanjem na email.</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rezultat kalkulatora -->
+                    <div class="kalkulator-summary">
+                        <h3>Procena Projekta</h3>
+                        <div class="summary-divider" style="height: 1px; background: var(--border-color); margin: 20px 0;"></div>
+                        
+                        <div class="summary-row">
+                            <span>Izabrani tip:</span>
+                            <span id="summary-type">Landing Stranica</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Broj stranica:</span>
+                            <span id="summary-pages">3</span>
+                        </div>
+                        
+                        <div class="summary-divider" style="height: 1px; background: var(--border-color); margin: 20px 0;"></div>
+                        
+                        <div class="summary-result-row">
+                            <span class="total-label">Procenjena Cena:</span>
+                            <span class="total-price" id="total-price">400€</span>
+                        </div>
+                        <div class="summary-result-row">
+                            <span class="time-label">Vreme Izrade:</span>
+                            <span class="total-time" id="total-days">7 radnih dana</span>
+                        </div>
+                        
+                        <div class="summary-info-box">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Ovo je informativna procena. Pošaljite upit kako bismo napravili tačnu ponudu i specifikaciju za vaš projekat.</p>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-block" id="calc-apply-btn">
+                            Pokreni Projekat sa Ovim Opcijama
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- Naš Proces Rada -->
+        <section class="tab-panel" id="proces">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">PROCES RADA</div>
+                    <h2 class="section-title">Kako radimo</h2>
+                    <p class="section-subtitle">Kako od vaše ideje dolazimo do premium i funkcionalnog sajta spremnog za lansiranje.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Korak 1 -->
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot">01</div>
+                        <div class="timeline-content">
+                            <h3>Konsultacije & Plan</h3>
+                            <p>
+                                Razgovaramo o vašem biznisu, ciljnoj grupi i ciljevima sajta. Definišemo strukturu i pravimo precizan plan rada i ponudu.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Korak 2 -->
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot">02</div>
+                        <div class="timeline-content">
+                            <h3>Vizuelni Koncept & Dizajn</h3>
+                            <p>
+                                Kreiramo unikatne dizajnerske koncepte prilagođene vašem brendu. Definišemo boje, fontove i raspored elemenata sve dok u potpunosti ne budete zadovoljni vizuelnim identitetom.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Korak 3 -->
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot">03</div>
+                        <div class="timeline-content">
+                            <h3>Razvoj i Programiranje</h3>
+                            <p>
+                                Kada dizajn bude odobren, pišemo čist, semantički kod. Bez nepotrebnih dodataka i teških dodataka, što osigurava brzinu i bezbednost.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Korak 4 -->
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot">04</div>
+                        <div class="timeline-content">
+                            <h3>SEO & Lansiranje</h3>
+                            <p>
+                                Vršimo detaljno testiranje sajta, optimizaciju za mobilne uređaje i brzinu (SEO). Postavljamo sajt na server i predajemo vam ključeve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- FAQ Sekcija -->
+        <section class="tab-panel" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">POGLEDAJTE DETALJE</div>
+                    <h2 class="section-title">Često Postavljana Pitanja</h2>
+                    <p class="section-subtitle">Odgovori na najčešća pitanja naših klijenata.</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1: Domen -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Da li kupujete domen za klijenta?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Možemo pomoći pri kupovini domena, ali preporučujemo da domen bude registrovan direktno na ime klijenta. Na taj način klijent ostaje vlasnik domena i ima potpunu kontrolu nad njim. Nakon kupovine dovoljno je da nam dostavite pristup kako bismo izvršili podešavanja.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2: Hosting -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Da li je hosting uključen u cenu?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Hosting nije uključen u cenu izrade sajta. Možemo preporučiti kvalitetan hosting ili pomoći oko podešavanja, ali preporučujemo da hosting bude kupljen direktno od strane klijenta. Hosting se najčešće plaća godinu dana unapred, nakon čega nam klijent dostavlja pristupne podatke za postavljanje sajta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3: Održavanje -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Da li nudite održavanje i podršku nakon izrade?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Da. Nakon završetka projekta pružamo tehničku podršku i pomoć oko manjih izmena. Za redovno održavanje, ažuriranja sadržaja i dodatne funkcionalnosti moguće je ugovoriti mesečni paket održavanja.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4: Trajanje -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Koliko traje izrada sajta?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Vreme izrade zavisi od obima projekta. Landing stranice se najčešće završavaju za 5–7 radnih dana, poslovni sajtovi za 7–14 dana, dok kompleksnije e-commerce prodavnice mogu zahtevati više vremena.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5: SEO -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Da li radite SEO optimizaciju za Google pretragu?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Da. Svi sajtovi dolaze sa osnovnom SEO optimizacijom koja uključuje optimizaciju brzine, meta podataka, strukture stranica i tehničkih SEO elemenata kako bi Google lakše indeksirao vaš sajt. Napredna SEO optimizacija dostupna je kao dodatna usluga.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6: CMS -->
+                    <div class="faq-item scroll-reveal">
+                        <button class="faq-question">
+                            <span>Da li klijent može samostalno da menja sadržaj na sajtu?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Da. U zavisnosti od tipa projekta moguće je omogućiti jednostavno menjanje tekstova, slika i određenih sekcija bez potrebe za programiranjem. Po završetku projekta dobijate kratko uputstvo za korišćenje.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- Velika Premium CTA Sekcija -->
+        <section class="cta-section scroll-reveal" id="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 class="cta-title">Spremni da podignete svoj biznis na viši nivo?</h2>
+                    <p class="cta-text">Moderan sajt nije trošak. To je investicija koja donosi nove klijente i gradi poverenje u vaš brend.</p>
+                    <a href="#kontakt" class="btn btn-primary btn-cta-main" id="cta-start-project-btn">
+                        Započni Projekat <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <div class="section-separator"></div>
+
+
+        <!-- Kontakt Sekcija -->
+        <section class="tab-panel" id="kontakt">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">KONTAKTIRAJTE NAS</div>
+                    <h2 class="section-title">Pokrenimo Projekat</h2>
+                    <p class="section-subtitle">Pišite nam o vašim ciljevima i napravićemo ponudu koja će podići vaš biznis na viši nivo.</p>
+                </div>
+
+                <!-- Sekcija: Besplatna Konsultacija -->
+                <div class="consultation-banner scroll-reveal" style="margin-bottom: 40px;">
+                    <div class="consultation-content">
+                        <h3>Niste sigurni koji tip sajta vam je potreban?</h3>
+                        <p>Zakažite besplatnu konsultaciju i pomoći ćemo vam da pronađete najbolje rešenje za vaš biznis.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="consultation-cta-btn">
+                        <i class="fa-solid fa-calendar-days"></i> Besplatna Konsultacija
+                    </button>
+                </div>
+
+                <div class="kontakt-grid">
+                    <!-- Info kartice -->
+                    <div class="kontakt-info scroll-reveal">
+                        <h3>Započnimo saradnju</h3>
+                        <p class="kontakt-lead-text">
+                            Imate viziju ili projekat na kom želite da radimo? Pišite nam na email i odgovoramo u najkraćem roku.
+                        </p>
+                        
+                        <div class="kontakt-details">
+                            <div class="kontakt-detail-item">
+                                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email Adresa</h4>
+                                    <a href="mailto:primeagency2026@outlook.com" class="kontakt-link">primeagency2026@outlook.com</a>
+                                </div>
+                            </div>
+                            <div class="kontakt-detail-item">
+                                <div class="icon-box"><i class="fa-solid fa-clock"></i></div>
+                                <div>
+                                    <h4>Radno Vreme</h4>
+                                    <p>Pon - Pet: 09:00 - 17:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Kontakt Forma -->
+                    <div class="kontakt-form-wrapper scroll-reveal">
+                        <div class="form-trust-factors">
+                            <span class="trust-item"><i class="fa-solid fa-circle-check"></i> Odgovaramo u roku od 24h</span>
+                            <span class="trust-item"><i class="fa-solid fa-circle-check"></i> Besplatna procena projekta</span>
+                            <span class="trust-item"><i class="fa-solid fa-circle-check"></i> Sigurna i poverljiva komunikacija</span>
+                        </div>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="name">Ime i prezime *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Vaše ime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-mail adresa *</label>
+                                    <input type="email" id="email" name="email" required placeholder="name@domain.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-type">Tip projekta *</label>
+                                <select id="project-type" name="project-type" required>
+                                    <option value="" disabled selected>Izaberite tip projekta</option>
+                                    <option value="landing">Landing Stranica</option>
+                                    <option value="business">Poslovni Sajt</option>
+                                    <option value="ecommerce">E-Commerce Prodavnica</option>
+                                    <option value="custom">Nesto drugo / Custom</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Opis projekta i vaši ciljevi *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Kratko nam opišite vaš biznis i šta želite da postignete sa novim sajtom..."></textarea>
+                            </div>
+                            
+                            <!-- Polje za prenos kalkulacije -->
+                            <div class="form-group" id="calc-details-container" style="display: none;">
+                                <label>Izabrane opcije iz kalkulatora</label>
+                                <textarea id="calc-details-input" name="calc-details" rows="2" readonly></textarea>
+                                <button type="button" class="btn-clear-calc" id="clear-calc-btn"><i class="fa-solid fa-xmark"></i> Ukloni opcije kalkulatora</button>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                Pošalji Upit <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div class="form-response" id="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom JS -->
+    <script src="app.js?v=22"></script>
+</body>
+</html>
