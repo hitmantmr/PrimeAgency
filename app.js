@@ -391,11 +391,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. PREMIUM 3D PARALLAX TILT ZA HERO WIDGETE ---
+    // --- 6. PREMIUM 3D PARALLAX TILT ZA GLAVNI BROWSER MOCKUP ---
     const heroVisual = document.getElementById('hero-visual-container');
     const tiltMockup = document.getElementById('browser-tilt');
-    const widgetSpeed = document.getElementById('widget-speed');
-    const widgetChart = document.getElementById('widget-chart');
 
     if (heroVisual && tiltMockup) {
         let rect = null;
@@ -415,26 +413,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const percentX = (x - centerX) / centerX;
             const percentY = (centerY - y) / centerY;
             
-            // Rotacije za mockup
-            const rotateX = percentY * 8;
-            const rotateY = percentX * 8;
+            // Rotacije za mockup - polazimo od default CSS rotacija (rotateY(-10deg) rotateX(6deg) rotateZ(1deg))
+            const rotateX = 6 + (percentY * 6);   // od 0deg do 12deg
+            const rotateY = -10 + (percentX * 8); // od -18deg do -2deg
+            const rotateZ = 1;
             
-            // Pomeraji za plutajuće vidžete (Parallax)
-            const speedTx = percentX * 12;
-            const speedTy = -percentY * 12;
-            
-            const chartTx = percentX * -15;
-            const chartTy = percentY * 15;
-            
-            // Primena transformacija
-            tiltMockup.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-            
-            if (widgetSpeed) {
-                widgetSpeed.style.transform = `translate3d(${speedTx}px, ${speedTy}px, 20px) rotateX(${rotateX * 1.2}deg) rotateY(${rotateY * 1.2}deg)`;
-            }
-            if (widgetChart) {
-                widgetChart.style.transform = `translate3d(${chartTx}px, ${chartTy}px, 30px) rotateX(${rotateX * 1.3}deg) rotateY(${rotateY * 1.3}deg)`;
-            }
+            // Primena transformacije sa 3D dubinom
+            tiltMockup.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale3d(1.02, 1.02, 1.02)`;
             
             ticking = false;
         };
@@ -452,8 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleMouseEnter = () => {
             rect = heroVisual.getBoundingClientRect();
             tiltMockup.style.transition = 'none';
-            if (widgetSpeed) widgetSpeed.style.transition = 'none';
-            if (widgetChart) widgetChart.style.transition = 'none';
         };
 
         const handleMouseLeave = () => {
@@ -461,21 +444,16 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const transitionStyle = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
             tiltMockup.style.transition = transitionStyle;
-            tiltMockup.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-            
-            if (widgetSpeed) {
-                widgetSpeed.style.transition = transitionStyle;
-                widgetSpeed.style.transform = 'translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
-            }
-            if (widgetChart) {
-                widgetChart.style.transition = transitionStyle;
-                widgetChart.style.transform = 'translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg)';
-            }
+            // Vraćamo na originalne CSS 3D vrednosti
+            tiltMockup.style.transform = 'rotateX(6deg) rotateY(-10deg) rotateZ(1deg) scale3d(1, 1, 1)';
         };
 
-        heroVisual.addEventListener('mousemove', handleMouseMove);
-        heroVisual.addEventListener('mouseleave', handleMouseLeave);
-        heroVisual.addEventListener('mouseenter', handleMouseEnter);
+        // Omogućavamo tilt samo na većim ekranima gde se prikazuje 3D raspored
+        if (window.innerWidth >= 992) {
+            heroVisual.addEventListener('mousemove', handleMouseMove);
+            heroVisual.addEventListener('mouseleave', handleMouseLeave);
+            heroVisual.addEventListener('mouseenter', handleMouseEnter);
+        }
     }
 
     // --- 7. SIMULACIJA SLANJA KONTAKT FORME ---

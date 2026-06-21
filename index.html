@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=48">
+    <link rel="stylesheet" href="style.css?v=51">
 </head>
 <body>
 
@@ -81,6 +81,9 @@
 
         <!-- Početna Sekcija (Hero) -->
         <section class="tab-panel hero active" id="hero">
+            <!-- 3D perspektivna mreža na podu -->
+            <div class="hero-grid-floor" aria-hidden="true"></div>
+
             <div class="container hero-container">
                 <!-- Leva kolona (Tekst i CTA) -->
                 <div class="hero-content">
@@ -92,36 +95,22 @@
                         <div class="badge" style="margin-bottom: 0;">SAJTOVI KOJI DONOSE OZBILJAN PROFIT</div>
                     </div>
                     <h1 class="hero-title scroll-reveal">
-                        Vaš biznis zaslužuje <span class="text-gradient-violet">sajt koji prodaje</span>.
+                        Vaš biznis zaslužuje <span class="text-gradient-premium">sajt koji prodaje</span>.
                     </h1>
                     <p class="hero-subtitle scroll-reveal">
                         Moderni i brzi web sajtovi koji ostavljaju profesionalan utisak, povećavaju poverenje klijenata i pretvaraju posetioce u kupce.
                     </p>
                     <div class="hero-btns scroll-reveal">
-                        <a href="#kontakt" class="btn btn-primary">
-                            Zatraži Ponudu <i class="fa-solid fa-paper-plane"></i>
+                        <a href="#kontakt" class="btn btn-primary btn-nav-cta">
+                            Zatraži Ponudu <i class="fa-solid fa-arrow-right" style="margin-left: 4px;"></i>
                         </a>
                         <a href="#portfolio" class="btn btn-secondary">
                             Pogledaj Radove
                         </a>
                     </div>
-                    <div class="hero-stats scroll-reveal">
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Ručni Kod</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">&lt; 1.0s</span>
-                            <span class="stat-label">Brzina učitavanja</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100/100</span>
-                            <span class="stat-label">Google PageSpeed</span>
-                        </div>
-                    </div>
                 </div>
                 
-                <!-- Desna kolona (Interaktivni Mockup sa preklapajućim staklenim karticama) -->
+                <!-- Desna kolona (Veliki lebdeći browser/dashboard sa 6 widgeta) -->
                 <div class="hero-visual scroll-reveal" id="hero-visual-container">
                     <!-- Glavna kartica (Mockup brauzera) -->
                     <div class="browser-mockup" id="browser-tilt">
@@ -132,80 +121,224 @@
                             <div class="browser-url">primeagency.rs</div>
                         </div>
                         <div class="browser-body">
-                            <div class="score-circle">
-                                <div class="score-inner">
-                                    <span class="score-num">100</span>
-                                    <div class="score-label">Speed</div>
-                                </div>
-                            </div>
-                            <div class="mock-stats">
-                                <div class="mock-stat-row">
-                                    <span class="mock-stat-label">Performance</span>
-                                    <span class="mock-stat-val" style="color: var(--accent);">100%</span>
-                                </div>
-                                <div class="mock-stat-bar"><div class="mock-stat-fill" style="width: 100%; background: var(--accent);"></div></div>
-                                
-                                <div class="mock-stat-row" style="margin-top: 8px;">
-                                    <span class="mock-stat-label">SEO score</span>
-                                    <span class="mock-stat-val" style="color: var(--accent);">100%</span>
-                                </div>
-                                <div class="mock-stat-bar"><div class="mock-stat-fill" style="width: 100%; background: var(--accent);"></div></div>
+                            <!-- Dashboard Layout -->
+                            <div class="dashboard-mock">
+                                <!-- Sidebar -->
+                                <aside class="dash-sidebar">
+                                    <div class="dash-logo-placeholder"></div>
+                                    <nav class="dash-menu-items">
+                                        <div class="dash-item active"></div>
+                                        <div class="dash-item"></div>
+                                        <div class="dash-item"></div>
+                                        <div class="dash-item"></div>
+                                    </nav>
+                                </aside>
+                                <!-- Main Panel -->
+                                <main class="dash-main">
+                                    <!-- Header Row -->
+                                    <header class="dash-header">
+                                        <div class="dash-user-circle"></div>
+                                    </header>
+                                    <!-- Metric Cards Grid -->
+                                    <div class="dash-metrics-grid">
+                                        <div class="dash-metric-card">
+                                            <div class="metric-line-sm"></div>
+                                            <div class="metric-value"></div>
+                                        </div>
+                                        <div class="dash-metric-card">
+                                            <div class="metric-line-sm"></div>
+                                            <div class="metric-value"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Large Analytics Graph -->
+                                    <div class="dash-large-chart">
+                                        <div class="chart-header">
+                                            <div class="chart-title-line"></div>
+                                        </div>
+                                        <div class="chart-svg-wrapper">
+                                            <svg viewBox="0 0 100 35" class="dash-chart-svg">
+                                                <path d="M 0 30 Q 15 15 30 25 T 60 5 T 90 20 T 100 10 L 100 35 L 0 35 Z" fill="rgba(37, 99, 235, 0.15)"></path>
+                                                <path d="M 0 30 Q 15 15 30 25 T 60 5 T 90 20 T 100 10" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <!-- Rows List -->
+                                    <div class="dash-rows-list">
+                                        <div class="dash-row-item">
+                                            <div class="row-cell-icon"></div>
+                                            <div class="row-cell-text"></div>
+                                            <div class="row-cell-badge"></div>
+                                        </div>
+                                        <div class="dash-row-item">
+                                            <div class="row-cell-icon"></div>
+                                            <div class="row-cell-text"></div>
+                                            <div class="row-cell-badge"></div>
+                                        </div>
+                                    </div>
+                                </main>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Plutajući vidžet 1: PageSpeed (Preklapa donji levi deo) -->
-                    <div class="floating-widget widget-speed" id="widget-speed">
-                        <div class="widget-icon green-glow"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="widget-info">
-                            <h4>Google PageSpeed</h4>
-                            <div class="widget-status">
-                                <span class="pulse-dot"></span>
-                                <span class="status-text">100/100 Odlično</span>
-                            </div>
+                    <!-- Plutajući vidžet 1: Performance (gore levo) -->
+                    <div class="floating-widget widget-performance" id="widget-performance">
+                        <div class="widget-perf-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart-blue">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">100</text>
+                                <text x="18" y="27" class="circle-lbl">Odlično</text>
+                            </svg>
+                        </div>
+                        <div class="widget-perf-list">
+                            <div class="perf-list-row"><span>Performance</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
+                            <div class="perf-list-row"><span>SEO</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
+                            <div class="perf-list-row"><span>Best Practices</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
+                            <div class="perf-list-row"><span>Mobile Friendly</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
                         </div>
                     </div>
 
-                    <!-- Plutajući vidžet 2: Uptime / SEO Graph (Preklapa gornji desni deo) -->
-                    <div class="floating-widget widget-chart" id="widget-chart">
-                        <div class="widget-header">
-                            <h4>Uptime & SEO</h4>
-                            <span class="badge-percentage">100%</span>
+                    <!-- Plutajući vidžet 2: Analytics (gore sredina) -->
+                    <div class="floating-widget widget-analytics" id="widget-analytics">
+                        <div class="widget-anal-header">
+                            <span>Analytics</span>
+                            <span class="widget-dropdown">Poslednjih 30 dana <i class="fa-solid fa-chevron-down"></i></span>
                         </div>
-                        <div class="mini-chart">
-                            <span class="chart-bar" style="height: 40%"></span>
-                            <span class="chart-bar" style="height: 60%"></span>
-                            <span class="chart-bar" style="height: 75%"></span>
-                            <span class="chart-bar" style="height: 90%"></span>
-                            <span class="chart-bar" style="height: 100%"></span>
+                        <div class="widget-anal-value">
+                            <div class="anal-main-val">
+                                <h3>8,842</h3>
+                                <p>Ukupni Posetioci</p>
+                            </div>
+                            <span class="trend-green"><i class="fa-solid fa-arrow-up" style="font-size: 8px;"></i> 24.6%</span>
+                        </div>
+                        <div class="widget-anal-chart">
+                            <svg viewBox="0 0 200 60" class="sparkline-svg">
+                                <defs>
+                                    <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 0 50 Q 20 40 40 45 T 80 20 T 120 30 T 160 10 T 200 25 L 200 60 L 0 60 Z" fill="url(#chart-grad)" />
+                                <path d="M 0 50 Q 20 40 40 45 T 80 20 T 120 30 T 160 10 T 200 25" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 3: SEO Score (gore desno) -->
+                    <div class="floating-widget widget-seo" id="widget-seo">
+                        <div class="widget-perf-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart-green">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">100</text>
+                                <text x="18" y="27" class="circle-lbl">Savršeno</text>
+                            </svg>
+                        </div>
+                        <div class="widget-seo-list">
+                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Meta Tagovi</span></div>
+                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Sitemap</span></div>
+                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Mobile Friendly</span></div>
+                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Core Web Vitals</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 4: Brzina (dole levo) -->
+                    <div class="floating-widget widget-speed-badge" id="widget-speed-badge">
+                        <div class="widget-badge-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="widget-badge-content">
+                            <p class="badge-label">Brzina Učitavanja</p>
+                            <h3>&lt; 1.0s</h3>
+                            <p class="badge-status">Odlično</p>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 5: Konverzija (desno sredina) -->
+                    <div class="floating-widget widget-conversion" id="widget-conversion">
+                        <div class="widget-conv-header">
+                            <span>Konverzija</span>
+                        </div>
+                        <div class="widget-conv-body">
+                            <h3>15.6%</h3>
+                            <span class="trend-green"><i class="fa-solid fa-arrow-up" style="font-size: 8px;"></i> 7.3%</span>
+                        </div>
+                        <div class="widget-conv-chart">
+                            <svg viewBox="0 0 100 25" class="sparkline-mini">
+                                <path d="M0 20 Q 20 15 40 18 T 80 5 T 100 12" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Plutajući vidžet 6: Uptime (dole desno) -->
+                    <div class="floating-widget widget-uptime" id="widget-uptime">
+                        <div class="widget-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="widget-badge-content">
+                            <p class="badge-label">Uptime & Sigurnost</p>
+                            <h3>99.9%</h3>
+                            <p class="badge-status">Uptime</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Sekcija Rezultati -->
-            <div class="results-bar scroll-reveal">
+            <!-- Unificirana Bottom Stats Bar -->
+            <div class="hero-stats-bar scroll-reveal">
                 <div class="container">
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <div class="result-val-wrapper">
-                                <span class="result-number" data-target="15">0</span><span class="result-plus">+</span>
+                    <div class="stats-bar-grid">
+                        <div class="stats-bar-item">
+                            <i class="fa-solid fa-code"></i>
+                            <div class="stats-bar-text">
+                                <strong>100%</strong>
+                                <span>Ručni Kod</span>
                             </div>
-                            <p class="result-label">Projekata</p>
                         </div>
-                        <div class="result-card">
-                            <div class="result-val-wrapper">
-                                <span class="result-number" data-target="100">0</span><span class="result-plus">%</span>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-solid fa-bolt"></i>
+                            <div class="stats-bar-text">
+                                <strong>&lt; 1.0s</strong>
+                                <span>Brzina Učitavanja</span>
                             </div>
-                            <p class="result-label">Zadovoljnih Klijenata</p>
                         </div>
-                        <div class="result-card">
-                            <span class="result-number-special">&lt;1s</span>
-                            <p class="result-label">Učitavanje</p>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <div class="stats-bar-text">
+                                <strong>100/100</strong>
+                                <span>Google PageSpeed</span>
+                            </div>
                         </div>
-                        <div class="result-card">
-                            <span class="result-number-special">24/7</span>
-                            <p class="result-label">Podrška</p>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-solid fa-user-check"></i>
+                            <div class="stats-bar-text">
+                                <strong>15+</strong>
+                                <span>Završenih Projekata</span>
+                            </div>
+                        </div>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <div class="stats-bar-text">
+                                <strong>100%</strong>
+                                <span>Zadovoljnih Klijenata</span>
+                            </div>
+                        </div>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div class="stats-bar-text">
+                                <strong>&lt; 1s</strong>
+                                <span>Vreme Odziva</span>
+                            </div>
+                        </div>
+                        <div class="stats-bar-divider"></div>
+                        <div class="stats-bar-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div class="stats-bar-text">
+                                <strong>24/7</strong>
+                                <span>Podrška</span>
+                            </div>
                         </div>
                     </div>
                 </div>
