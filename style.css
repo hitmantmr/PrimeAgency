@@ -2076,7 +2076,7 @@ button, input, select, textarea {
 @media (min-width: 992px) {
     .hero {
         height: 100vh !important;
-        min-height: 700px !important;
+        min-height: 740px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -2086,17 +2086,20 @@ button, input, select, textarea {
     .hero-container {
         flex: 1 !important;
         display: grid !important;
-        grid-template-columns: 44% 56% !important; /* Leva kolona 44%, desna 56% - browser je glavni fokus */
+        grid-template-columns: 40% 60% !important; /* Leva kolona 40%, desna 60% - browser je ogroman i dominantan */
         gap: 40px !important;
         align-items: center !important;
         width: 100% !important;
         margin-bottom: 20px !important;
     }
     .hero-stats-bar {
-        margin-top: 0 !important; /* Upravlja se sa justify-content: space-between */
+        margin-top: 0 !important;
     }
     .browser-mockup {
-        max-width: 530px !important; /* Veći brauzer na desktopu kao centralni fokus */
+        max-width: 680px !important; /* Ogroman centralni fokus na desnoj strani */
+    }
+    .hero-visual {
+        min-height: 520px !important; /* Više prostora za velike plutajuće vidžete */
     }
 }
 .hero-title {
@@ -2154,190 +2157,305 @@ button, input, select, textarea {
 .browser-mockup {
     width: 100%;
     max-width: 480px; /* Default za mobilne uređaje */
-    background: #060813 !important; /* Tamno plavo-crna pozadina */
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: #020308 !important; /* Duboka crna pozadina */
+    border: 1px solid rgba(255, 255, 255, 0.12) !important; /* Crisper, premium svetla ivica */
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(37, 99, 235, 0.15); /* Subtilan plavi glow iza brauzera */
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(37, 99, 235, 0.25), 0 0 100px rgba(37, 99, 235, 0.1) !important; /* Izraženiji plavi glow */
     transform: rotateY(-10deg) rotateX(6deg) rotateZ(1deg); /* Blagi 3D nagib */
     transform-style: preserve-3d;
     z-index: 5 !important;
     transition: transform 0.4s ease;
+    position: relative;
+}
+.browser-mockup::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), transparent 50%, rgba(139, 92, 246, 0.1));
+    pointer-events: none;
+    z-index: 6;
 }
 .browser-mockup:hover {
     transform: rotateY(-4deg) rotateX(3deg) rotateZ(0deg);
 }
 
-.dashboard-mock {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    height: 260px;
-    font-size: 10px;
-}
-
-/* Sidebar */
-.dash-sidebar {
-    background: rgba(255, 255, 255, 0.01);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 12px 8px;
+/* Premium Webpage Preview (Stilizovan Prikaz Sajta) */
+.webpage-preview {
+    background: #03050c;
+    height: 295px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-.dash-logo-placeholder {
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-}
-.dash-menu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-}
-.dash-item {
-    height: 5px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-}
-.dash-item.active {
-    background: #3b82f6;
-}
-
-/* Main Area */
-.dash-main {
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    font-family: var(--font-body);
     overflow: hidden;
+    user-select: none;
+    position: relative;
 }
-.dash-header {
+.preview-navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 16px;
+    padding: 0 12px;
+    background: rgba(3, 5, 12, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    height: 28px;
+    box-sizing: border-box;
 }
-.dash-user-circle {
-    width: 14px;
-    height: 14px;
+.preview-logo {
+    display: flex;
+    align-items: center;
+    gap: 3.5px;
+    font-family: var(--font-heading);
+    font-size: 6px;
+    font-weight: 850;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+.preview-logo-dot {
+    width: 3.5px;
+    height: 3.5px;
+    background: #2563eb;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
 }
-
-/* Metrics */
-.dash-metrics-grid {
+.preview-nav-links {
+    display: flex;
+    gap: 7px;
+    font-size: 5px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.preview-nav-links span.active {
+    color: #ffffff;
+}
+.preview-navbar-btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 5px;
+    font-weight: 750;
+    padding: 2.5px 6.5px;
+    border-radius: 4px;
+}
+.preview-hero-content {
+    flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 46% 54%;
     gap: 10px;
+    padding: 14px 12px;
+    align-items: center;
+    background: radial-gradient(circle at 100% 100%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
+    box-sizing: border-box;
 }
-.dash-metric-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
-    padding: 8px;
+.preview-hero-text {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
+    align-items: flex-start;
 }
-.metric-line-sm {
-    height: 4px;
-    width: 40px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 2px;
+.preview-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: rgba(37, 99, 235, 0.08);
+    border: 0.8px solid rgba(37, 99, 235, 0.2);
+    padding: 2px 5px;
+    border-radius: 100px;
+    color: #3b82f6;
+    font-size: 4px;
+    font-weight: 750;
+    letter-spacing: 0.2px;
 }
-.metric-value {
-    height: 6px;
-    width: 25px;
+.preview-hero-badge .badge-dot {
+    width: 2.5px;
+    height: 2.5px;
     background: #3b82f6;
-    border-radius: 2px;
+    border-radius: 50%;
 }
-
-/* Large Analytics Chart */
-.dash-large-chart {
-    background: rgba(255, 255, 255, 0.015);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 8px;
-    padding: 8px 12px;
+.preview-hero-title {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 850;
+    line-height: 1.12;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+.preview-hero-title span {
+    color: #3b82f6;
+}
+.preview-hero-subtitle {
+    font-size: 6.5px;
+    color: var(--text-muted);
+    line-height: 1.35;
+    max-width: 95%;
+}
+.preview-hero-btns {
+    display: flex;
+    gap: 5px;
+}
+.preview-btn {
+    font-size: 5px;
+    font-weight: 750;
+    padding: 3.5px 7.5px;
+    border-radius: 3px;
+}
+.preview-btn.btn-blue {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+}
+.preview-btn.btn-outline {
+    border: 0.8px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.01);
+    color: #ffffff;
+}
+.preview-hero-visual {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    height: 100%;
+    position: relative;
+    justify-content: space-between;
 }
-.chart-title-line {
-    height: 4px;
-    width: 60px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-}
-.chart-svg-wrapper {
-    height: 45px;
+.preview-mockups-wrapper {
+    position: relative;
     width: 100%;
+    height: 90px;
+    margin-top: 5px;
 }
-.dash-chart-svg {
+.preview-laptop {
+    position: absolute;
+    bottom: 2px;
+    left: 4%;
+    width: 120px;
+    z-index: 1;
+}
+.preview-laptop-screen {
+    width: 102px;
+    height: 64px;
+    margin: 0 auto;
+    border: 3px solid #141416;
+    border-radius: 4px 4px 0 0;
+    background: #020306;
+    overflow: hidden;
+    position: relative;
+}
+.preview-laptop-screen-content {
     width: 100%;
     height: 100%;
+    background-color: #030408;
+    background-image: radial-gradient(circle at center, rgba(251, 146, 60, 0.14) 0%, transparent 60%);
+    position: relative;
 }
-
-/* Rows List */
-.dash-rows-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.preview-screen-glow {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 25%;
+    background: linear-gradient(to top, rgba(251, 146, 60, 0.18), transparent);
 }
-.dash-row-item {
+.preview-laptop-keyboard {
+    width: 120px;
+    height: 3px;
+    background: #18191e;
+    border-radius: 0 0 3px 3px;
+    border-bottom: 1.2px solid #282a32;
+}
+.preview-phone {
+    position: absolute;
+    bottom: 2px;
+    right: 14%;
+    width: 22px;
+    height: 44px;
+    border: 1.8px solid #141416;
+    border-radius: 3.5px;
+    background: #020306;
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+.preview-phone-screen {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(139, 92, 246, 0.08));
+    position: relative;
+}
+.preview-phone-home-indicator {
+    position: absolute;
+    bottom: 1.2px;
+    left: 50%;
+    width: 8px;
+    height: 0.6px;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%);
+}
+.preview-trusted-box {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 4px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 0.8px solid rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 3px 6px;
+    margin-top: auto;
+    align-self: flex-start;
+    box-sizing: border-box;
 }
-.row-cell-icon {
+.preview-avatar-group {
+    display: flex;
+    align-items: center;
+}
+.preview-avatar {
     width: 8px;
     height: 8px;
-    border-radius: 2px;
-    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    border: 0.8px solid #03050c;
+    margin-left: -2.5px;
 }
-.row-cell-text {
-    height: 4px;
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    max-width: 80px;
+.preview-avatar:first-child {
+    margin-left: 0;
 }
-.row-cell-badge {
-    width: 20px;
-    height: 6px;
-    border-radius: 3px;
-    background: rgba(59, 130, 246, 0.2);
+.preview-avatar.ava-1 {
+    background: #3b82f6;
+}
+.preview-avatar.ava-2 {
+    background: #ec4899;
+}
+.preview-avatar.ava-3 {
+    background: #10b981;
+}
+.preview-trusted-text {
+    font-size: 5.5px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.preview-trusted-text strong {
+    color: #ffffff;
+    font-weight: 700;
 }
 
 /* 6 manjih lebdećih staklenih vidžeta */
 .floating-widget {
     position: absolute !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    background: rgba(10, 15, 30, 0.45) !important; /* Tamnije staklo */
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 10px !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(37, 99, 235, 0.05) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    background: rgba(8, 12, 28, 0.55) !important; /* Tamno staklo sa bogatim plavim tonom */
+    border: 1.2px solid rgba(255, 255, 255, 0.12) !important; /* Crisper border */
+    border-radius: 12px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(37, 99, 235, 0.08) !important; /* Bogatiji sjaj */
     z-index: 10 !important;
-    padding: 10px 12px !important;
-    transition: transform 0.3s ease, border-color 0.3s ease !important;
+    padding: 12px 14px !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
     animation: float-gentle 18s ease-in-out infinite alternate;
 }
 .floating-widget:hover {
-    border-color: rgba(37, 99, 235, 0.3) !important;
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(37, 99, 235, 0.15) !important;
+    border-color: rgba(37, 99, 235, 0.4) !important;
+    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(37, 99, 235, 0.2) !important;
 }
 
 /* 1. Performance Widget (gore levo) */
 .widget-performance {
-    top: -15px;
-    left: 15px;
-    width: 140px;
+    top: -45px;
+    left: -10px;
+    width: 175px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2345,8 +2463,8 @@ button, input, select, textarea {
     animation-delay: 0s;
 }
 .widget-perf-circle {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
     margin: 0 auto;
 }
 .circular-chart-blue, .circular-chart-green {
@@ -2374,20 +2492,20 @@ button, input, select, textarea {
     fill: #ffffff;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 9px;
+    font-size: 10px;
     text-anchor: middle;
 }
 .circular-chart-blue .circle-lbl, .circular-chart-green .circle-lbl {
     fill: var(--text-muted);
     font-weight: 600;
-    font-size: 5px;
+    font-size: 5.5px;
     text-anchor: middle;
 }
 .widget-perf-list {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 7.5px;
+    font-size: 8.5px;
 }
 .perf-list-row {
     display: flex;
@@ -2397,7 +2515,7 @@ button, input, select, textarea {
     color: var(--text-muted);
 }
 .perf-list-row span {
-    width: 50px;
+    width: 58px;
     white-space: nowrap;
 }
 .perf-bar {
@@ -2420,9 +2538,9 @@ button, input, select, textarea {
 
 /* 2. Analytics Widget (gore sredina) */
 .widget-analytics {
-    top: -45px;
-    left: 145px;
-    width: 165px;
+    top: -70px;
+    left: calc(50% - 130px);
+    width: 260px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -2433,7 +2551,7 @@ button, input, select, textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 8px;
+    font-size: 9px;
     color: var(--text-muted);
 }
 .widget-dropdown {
@@ -2451,25 +2569,25 @@ button, input, select, textarea {
     align-items: flex-start;
 }
 .anal-main-val h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.1;
 }
 .anal-main-val p {
-    font-size: 7.5px;
+    font-size: 8px;
     color: var(--text-muted);
 }
 .trend-green {
     color: #10b981;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 2px;
 }
 .widget-anal-chart {
-    height: 35px;
+    height: 48px;
     width: 100%;
     margin-top: 2px;
 }
@@ -2480,9 +2598,9 @@ button, input, select, textarea {
 
 /* 3. SEO Score Widget (gore desno) */
 .widget-seo {
-    top: -15px;
-    right: 15px;
-    width: 135px;
+    top: -45px;
+    right: -10px;
+    width: 175px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -2493,7 +2611,7 @@ button, input, select, textarea {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    font-size: 7.5px;
+    font-size: 8.5px;
 }
 .seo-row {
     display: flex;
@@ -2503,14 +2621,14 @@ button, input, select, textarea {
 }
 .seo-row i {
     color: #10b981;
-    font-size: 8px;
+    font-size: 9px;
 }
 
 /* 4. Brzina Widget (dole levo) */
 .widget-speed-badge {
-    bottom: 45px;
-    left: 5px;
-    width: 135px;
+    bottom: 25px;
+    left: -45px;
+    width: 140px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -2518,8 +2636,8 @@ button, input, select, textarea {
     animation-delay: 1.5s;
 }
 .widget-badge-icon {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 6px;
     background: rgba(37, 99, 235, 0.15);
     border: 1px solid rgba(37, 99, 235, 0.25);
@@ -2527,36 +2645,36 @@ button, input, select, textarea {
     align-items: center;
     justify-content: center;
     color: #3b82f6;
-    font-size: 11px;
+    font-size: 12px;
 }
 .widget-badge-content {
     display: flex;
     flex-direction: column;
 }
 .badge-label {
-    font-size: 7px;
+    font-size: 8px;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
 .widget-badge-content h3 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.1;
     margin: 1px 0;
 }
 .badge-status {
-    font-size: 7px;
+    font-size: 8px;
     color: #10b981;
     font-weight: bold;
 }
 
 /* 5. Konverzija Widget (desno sredina) */
 .widget-conversion {
-    bottom: 125px;
-    right: 10px;
-    width: 110px;
+    bottom: 120px;
+    right: -40px;
+    width: 125px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -2564,7 +2682,7 @@ button, input, select, textarea {
     animation-delay: 3s;
 }
 .widget-conv-header {
-    font-size: 7.5px;
+    font-size: 8.5px;
     color: var(--text-muted);
 }
 .widget-conv-body {
@@ -2573,12 +2691,12 @@ button, input, select, textarea {
     justify-content: space-between;
 }
 .widget-conv-body h3 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 800;
     color: #ffffff;
 }
 .widget-conv-chart {
-    height: 15px;
+    height: 18px;
     width: 100%;
     margin-top: 2px;
 }
@@ -2589,9 +2707,9 @@ button, input, select, textarea {
 
 /* 6. Uptime Widget (dole desno) */
 .widget-uptime {
-    bottom: 35px;
-    right: 5px;
-    width: 135px;
+    bottom: 15px;
+    right: -35px;
+    width: 150px;
     display: flex;
     align-items: center;
     gap: 10px;
