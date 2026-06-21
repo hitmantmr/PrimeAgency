@@ -391,9 +391,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. PREMIUM 3D PARALLAX TILT ZA GLAVNI BROWSER MOCKUP ---
+    // --- 6. PREMIUM VIŠESLOJNI 3D PARALLAX ZA HERO VIZUAL ---
     const heroVisual = document.getElementById('hero-visual-container');
     const tiltMockup = document.getElementById('browser-tilt');
+    const parallaxLayers = document.querySelectorAll('.layer-widget');
 
     if (heroVisual && tiltMockup) {
         let rect = null;
@@ -413,13 +414,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const percentX = (x - centerX) / centerX;
             const percentY = (centerY - y) / centerY;
             
-            // Rotacije za mockup - polazimo od default CSS rotacija (rotateY(-10deg) rotateX(6deg) rotateZ(1deg))
-            const rotateX = 6 + (percentY * 6);   // od 0deg do 12deg
-            const rotateY = -10 + (percentX * 8); // od -18deg do -2deg
+            // 1. Rotacije za glavni browser - polazimo od default CSS rotacija (rotateY(-10deg) rotateX(6deg) rotateZ(1deg))
+            const rotateX = 6 + (percentY * 5);   // od 1deg do 11deg
+            const rotateY = -10 + (percentX * 6); // od -16deg do -4deg
             const rotateZ = 1;
             
-            // Primena transformacije sa 3D dubinom
-            tiltMockup.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale3d(1.02, 1.02, 1.02)`;
+            tiltMockup.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale3d(1.01, 1.01, 1.01)`;
+            
+            // 2. Pomeranje plutajućih vidžeta na osnovu dubine (data-depth)
+            // Učitavamo originalne CSS transformacije lebdenja (koje diktira animacija) i sabiramo sa parallax pomerajem
+            parallaxLayers.forEach(layer => {
+                const depth = parseFloat(layer.getAttribute('data-depth')) || 0.1;
+                // Transliramo po X i Y osama srazmerno udaljenosti od centra i dubini
+                const translateX = percentX * depth * 80;
+                const translateY = percentY * depth * -80; // Suprotan smer za prirodan 3D osećaj
+                
+                layer.style.transform = `translate3d(${translateX}px, ${translateY}px, ${depth * 100}px)`;
+            });
             
             ticking = false;
         };
@@ -437,18 +448,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleMouseEnter = () => {
             rect = heroVisual.getBoundingClientRect();
             tiltMockup.style.transition = 'none';
+            parallaxLayers.forEach(layer => {
+                layer.style.transition = 'none';
+            });
         };
 
         const handleMouseLeave = () => {
             rect = null;
             
-            const transitionStyle = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            const transitionStyle = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
             tiltMockup.style.transition = transitionStyle;
-            // Vraćamo na originalne CSS 3D vrednosti
             tiltMockup.style.transform = 'rotateX(6deg) rotateY(-10deg) rotateZ(1deg) scale3d(1, 1, 1)';
+            
+            parallaxLayers.forEach(layer => {
+                layer.style.transition = transitionStyle;
+                layer.style.transform = 'translate3d(0, 0, 0)';
+            });
         };
 
-        // Omogućavamo tilt samo na većim ekranima gde se prikazuje 3D raspored
+        // Omogućavamo parallax samo na ekranima širim od 992px
         if (window.innerWidth >= 992) {
             heroVisual.addEventListener('mousemove', handleMouseMove);
             heroVisual.addEventListener('mouseleave', handleMouseLeave);

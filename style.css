@@ -2153,593 +2153,110 @@ button, input, select, textarea {
     z-index: 10;
 }
 
-/* Dashboard Mockup unutar brauzera (Vercel/Linear stil) */
-.browser-mockup {
-    width: 100%;
-    max-width: 480px; /* Default za mobilne uređaje */
-    background: #020308 !important; /* Duboka crna pozadina */
-    border: 1px solid rgba(255, 255, 255, 0.12) !important; /* Crisper, premium svetla ivica */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(37, 99, 235, 0.25), 0 0 100px rgba(37, 99, 235, 0.1) !important; /* Izraženiji plavi glow */
-    transform: rotateY(-10deg) rotateX(6deg) rotateZ(1deg); /* Blagi 3D nagib */
-    transform-style: preserve-3d;
-    z-index: 5 !important;
-    transition: transform 0.4s ease;
-    position: relative;
-}
-.browser-mockup::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), transparent 50%, rgba(139, 92, 246, 0.1));
-    pointer-events: none;
-    z-index: 6;
-}
-.browser-mockup:hover {
-    transform: rotateY(-4deg) rotateX(3deg) rotateZ(0deg);
-}
-
-/* Premium Webpage Preview (Stilizovan Prikaz Sajta) */
-.webpage-preview {
-    background: #03050c;
-    height: 295px;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-body);
-    overflow: hidden;
-    user-select: none;
-    position: relative;
-}
-.preview-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 12px;
-    background: rgba(3, 5, 12, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    height: 28px;
-    box-sizing: border-box;
-}
-.preview-logo {
-    display: flex;
-    align-items: center;
-    gap: 3.5px;
-    font-family: var(--font-heading);
-    font-size: 6px;
-    font-weight: 850;
-    color: #ffffff;
-    letter-spacing: -0.2px;
-}
-.preview-logo-dot {
-    width: 3.5px;
-    height: 3.5px;
-    background: #2563eb;
-    border-radius: 50%;
-}
-.preview-nav-links {
-    display: flex;
-    gap: 7px;
-    font-size: 5px;
-    font-weight: 600;
-    color: var(--text-muted);
-}
-.preview-nav-links span.active {
-    color: #ffffff;
-}
-.preview-navbar-btn {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff;
-    font-size: 5px;
-    font-weight: 750;
-    padding: 2.5px 6.5px;
-    border-radius: 4px;
-}
-.preview-hero-content {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 46% 54%;
-    gap: 10px;
-    padding: 14px 12px;
-    align-items: center;
-    background: radial-gradient(circle at 100% 100%, rgba(37, 99, 235, 0.05) 0%, transparent 60%);
-    box-sizing: border-box;
-}
-.preview-hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-start;
-}
-.preview-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    background: rgba(37, 99, 235, 0.08);
-    border: 0.8px solid rgba(37, 99, 235, 0.2);
-    padding: 2px 5px;
-    border-radius: 100px;
-    color: #3b82f6;
-    font-size: 4px;
-    font-weight: 750;
-    letter-spacing: 0.2px;
-}
-.preview-hero-badge .badge-dot {
-    width: 2.5px;
-    height: 2.5px;
-    background: #3b82f6;
-    border-radius: 50%;
-}
-.preview-hero-title {
-    font-family: var(--font-heading);
-    font-size: 13px;
-    font-weight: 850;
-    line-height: 1.12;
-    color: #ffffff;
-    letter-spacing: -0.3px;
-}
-.preview-hero-title span {
-    color: #3b82f6;
-}
-.preview-hero-subtitle {
-    font-size: 6.5px;
-    color: var(--text-muted);
-    line-height: 1.35;
-    max-width: 95%;
-}
-.preview-hero-btns {
-    display: flex;
-    gap: 5px;
-}
-.preview-btn {
-    font-size: 5px;
-    font-weight: 750;
-    padding: 3.5px 7.5px;
-    border-radius: 3px;
-}
-.preview-btn.btn-blue {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff;
-}
-.preview-btn.btn-outline {
-    border: 0.8px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.01);
-    color: #ffffff;
-}
-.preview-hero-visual {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    justify-content: space-between;
-}
-.preview-mockups-wrapper {
-    position: relative;
-    width: 100%;
-    height: 90px;
-    margin-top: 5px;
-}
-.preview-laptop {
-    position: absolute;
-    bottom: 2px;
-    left: 4%;
-    width: 120px;
-    z-index: 1;
-}
-.preview-laptop-screen {
-    width: 102px;
-    height: 64px;
-    margin: 0 auto;
-    border: 3px solid #141416;
-    border-radius: 4px 4px 0 0;
-    background: #020306;
-    overflow: hidden;
-    position: relative;
-}
-.preview-laptop-screen-content {
-    width: 100%;
-    height: 100%;
-    background-color: #030408;
-    background-image: radial-gradient(circle at center, rgba(251, 146, 60, 0.14) 0%, transparent 60%);
-    position: relative;
-}
-.preview-screen-glow {
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    width: 80%;
-    height: 25%;
-    background: linear-gradient(to top, rgba(251, 146, 60, 0.18), transparent);
-}
-.preview-laptop-keyboard {
-    width: 120px;
-    height: 3px;
-    background: #18191e;
-    border-radius: 0 0 3px 3px;
-    border-bottom: 1.2px solid #282a32;
-}
-.preview-phone {
-    position: absolute;
-    bottom: 2px;
-    right: 14%;
-    width: 22px;
-    height: 44px;
-    border: 1.8px solid #141416;
-    border-radius: 3.5px;
-    background: #020306;
-    z-index: 2;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-}
-.preview-phone-screen {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(139, 92, 246, 0.08));
-    position: relative;
-}
-.preview-phone-home-indicator {
-    position: absolute;
-    bottom: 1.2px;
-    left: 50%;
-    width: 8px;
-    height: 0.6px;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateX(-50%);
-}
-.preview-trusted-box {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 0.8px solid rgba(255, 255, 255, 0.05);
-    border-radius: 5px;
-    padding: 3px 6px;
-    margin-top: auto;
-    align-self: flex-start;
-    box-sizing: border-box;
-}
-.preview-avatar-group {
-    display: flex;
-    align-items: center;
-}
-.preview-avatar {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 0.8px solid #03050c;
-    margin-left: -2.5px;
-}
-.preview-avatar:first-child {
-    margin-left: 0;
-}
-.preview-avatar.ava-1 {
-    background: #3b82f6;
-}
-.preview-avatar.ava-2 {
-    background: #ec4899;
-}
-.preview-avatar.ava-3 {
-    background: #10b981;
-}
-.preview-trusted-text {
-    font-size: 5.5px;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-.preview-trusted-text strong {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-/* 6 manjih lebdećih staklenih vidžeta */
-.floating-widget {
+/* Premium 3D Parallax slojevi (WebP) */
+.parallax-layer {
     position: absolute !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    background: rgba(8, 12, 28, 0.55) !important; /* Tamno staklo sa bogatim plavim tonom */
-    border: 1.2px solid rgba(255, 255, 255, 0.12) !important; /* Crisper border */
-    border-radius: 12px !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(37, 99, 235, 0.08) !important; /* Bogatiji sjaj */
-    z-index: 10 !important;
-    padding: 12px 14px !important;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    transition: transform 0.15s ease-out;
+    pointer-events: none; /* Klikovi prolaze kroz njih da ne ometaju evente */
+}
+
+/* Glavni Browser (Pozadinski sloj) */
+.layer-browser {
+    position: relative !important; /* Diktira dimenzije visual kontejnera */
+    z-index: 5;
+    max-width: 680px;
+    width: 100%;
+    transform: rotateY(-10deg) rotateX(6deg) rotateZ(1deg); /* Osnovni 3D nagib */
+    transform-style: preserve-3d;
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.85)) drop-shadow(0 0 40px rgba(37,99,235,0.18));
+}
+.hero-main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Stilovi za plutajuće vidžete (WebP) sa prefinjenim staklenim senkama */
+.layer-widget {
+    z-index: 10;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.65)) drop-shadow(0 0 20px rgba(37,99,235,0.1));
+}
+.layer-widget img {
+    width: 100%;
+    height: auto;
+    display: block;
     animation: float-gentle 18s ease-in-out infinite alternate;
-}
-.floating-widget:hover {
-    border-color: rgba(37, 99, 235, 0.4) !important;
-    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(37, 99, 235, 0.2) !important;
+    animation-delay: var(--delay, 0s);
 }
 
-/* 1. Performance Widget (gore levo) */
-.widget-performance {
-    top: -45px;
-    left: -10px;
-    width: 175px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* 1. Performance Widget (Gore Levo) */
+.widget-performance-layer {
+    top: -30px;
+    left: -20px;
+    width: 120px;
     --rot: -3deg;
-    animation-delay: 0s;
-}
-.widget-perf-circle {
-    width: 52px;
-    height: 52px;
-    margin: 0 auto;
-}
-.circular-chart-blue, .circular-chart-green {
-    width: 100%;
-    height: 100%;
-}
-.circular-chart-blue .circle-bg, .circular-chart-green .circle-bg {
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.05);
-    stroke-width: 2.8;
-}
-.circular-chart-blue .circle {
-    fill: none;
-    stroke: #3b82f6;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-}
-.circular-chart-green .circle {
-    fill: none;
-    stroke: #10b981;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-}
-.circular-chart-blue .percentage, .circular-chart-green .percentage {
-    fill: #ffffff;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 10px;
-    text-anchor: middle;
-}
-.circular-chart-blue .circle-lbl, .circular-chart-green .circle-lbl {
-    fill: var(--text-muted);
-    font-weight: 600;
-    font-size: 5.5px;
-    text-anchor: middle;
-}
-.widget-perf-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 8.5px;
-}
-.perf-list-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-    color: var(--text-muted);
-}
-.perf-list-row span {
-    width: 58px;
-    white-space: nowrap;
-}
-.perf-bar {
-    flex: 1;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 1.5px;
-    overflow: hidden;
-}
-.perf-fill {
-    height: 100%;
-    background: #3b82f6;
-}
-.perf-val {
-    color: #ffffff;
-    font-weight: bold;
-    width: 12px;
-    text-align: right;
+    --delay: 0s;
 }
 
-/* 2. Analytics Widget (gore sredina) */
-.widget-analytics {
-    top: -70px;
-    left: calc(50% - 130px);
-    width: 260px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    --rot: 1deg;
-    animation-delay: 2s;
-}
-.widget-anal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 9px;
-    color: var(--text-muted);
-}
-.widget-dropdown {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 2px 5px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-}
-.widget-anal-value {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.anal-main-val h3 {
-    font-size: 18px;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.1;
-}
-.anal-main-val p {
-    font-size: 8px;
-    color: var(--text-muted);
-}
-.trend-green {
-    color: #10b981;
-    font-size: 9px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-.widget-anal-chart {
-    height: 48px;
-    width: 100%;
-    margin-top: 2px;
-}
-.sparkline-svg {
-    width: 100%;
-    height: 100%;
-}
-
-/* 3. SEO Score Widget (gore desno) */
-.widget-seo {
-    top: -45px;
-    right: -10px;
-    width: 175px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* 2. SEO Score Widget (Gore Desno) */
+.widget-seo-layer {
+    top: -20px;
+    right: -25px;
+    width: 115px;
     --rot: 3deg;
-    animation-delay: 4s;
-}
-.widget-seo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 8.5px;
-}
-.seo-row {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--text-muted);
-}
-.seo-row i {
-    color: #10b981;
-    font-size: 9px;
+    --delay: 3s;
 }
 
-/* 4. Brzina Widget (dole levo) */
-.widget-speed-badge {
-    bottom: 25px;
-    left: -45px;
-    width: 140px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* 3. PageSpeed Widget (Dole Levo) */
+.widget-pagespeed-layer {
+    bottom: 50px;
+    left: -40px;
+    width: 105px;
     --rot: -4deg;
-    animation-delay: 1.5s;
-}
-.widget-badge-icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
-    background: rgba(37, 99, 235, 0.15);
-    border: 1px solid rgba(37, 99, 235, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #3b82f6;
-    font-size: 12px;
-}
-.widget-badge-content {
-    display: flex;
-    flex-direction: column;
-}
-.badge-label {
-    font-size: 8px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-.widget-badge-content h3 {
-    font-size: 15px;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.1;
-    margin: 1px 0;
-}
-.badge-status {
-    font-size: 8px;
-    color: #10b981;
-    font-weight: bold;
+    --delay: 1.5s;
 }
 
-/* 5. Konverzija Widget (desno sredina) */
-.widget-conversion {
-    bottom: 120px;
-    right: -40px;
-    width: 125px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+/* 4. Conversion Rate Widget (Dole Desno) */
+.widget-conversion-layer {
+    bottom: 80px;
+    right: -45px;
+    width: 120px;
     --rot: 2deg;
-    animation-delay: 3s;
-}
-.widget-conv-header {
-    font-size: 8.5px;
-    color: var(--text-muted);
-}
-.widget-conv-body {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-.widget-conv-body h3 {
-    font-size: 15px;
-    font-weight: 800;
-    color: #ffffff;
-}
-.widget-conv-chart {
-    height: 18px;
-    width: 100%;
-    margin-top: 2px;
-}
-.sparkline-mini {
-    width: 100%;
-    height: 100%;
+    --delay: 4.5s;
 }
 
-/* 6. Uptime Widget (dole desno) */
-.widget-uptime {
-    bottom: 15px;
-    right: -35px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* 5. Backlinks Widget (Dole Sredina-Levo) */
+.widget-backlinks-layer {
+    bottom: -15px;
+    left: 80px;
+    width: 135px;
     --rot: -2deg;
-    animation-delay: 5s;
-}
-.widget-uptime .widget-badge-icon {
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.25);
-    color: #10b981;
-}
-.widget-uptime .widget-badge-content {
-    display: flex;
-    flex-direction: column;
+    --delay: 6s;
+    z-index: 12; /* Ispred browsera */
 }
 
-/* Lebdeća animacija za UI elemente */
+/* 6. Traffic Overview Widget (Dole Sredina-Desno) */
+.widget-traffic-layer {
+    bottom: -20px;
+    right: 70px;
+    width: 160px;
+    --rot: 1deg;
+    --delay: 2.2s;
+    z-index: 12; /* Ispred browsera */
+}
+
+/* Lebdeća animacija za WebP vidžete */
 @keyframes float-gentle {
     0% {
         transform: translateY(0px) rotate(var(--rot));
     }
     50% {
-        transform: translateY(-15px) rotate(calc(var(--rot) + 1.5deg));
+        transform: translateY(-12px) rotate(calc(var(--rot) + 1.2deg));
     }
     100% {
         transform: translateY(0px) rotate(var(--rot));
     }
 }
-
-
 
 /* Velika Premium CTA Sekcija */
 .cta-section {
@@ -3097,12 +2614,11 @@ button, input, select, textarea {
         min-height: auto !important;
         margin-bottom: 20px;
     }
-    .browser-mockup {
+    .layer-browser {
         transform: none !important;
         max-width: 100% !important;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(37, 99, 235, 0.08) !important;
     }
-    .floating-widget {
+    .layer-widget {
         display: none !important;
     }
     

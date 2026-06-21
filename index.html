@@ -110,192 +110,31 @@
                     </div>
                 </div>
                 
-                <!-- Desna kolona (Veliki lebdeći browser/dashboard sa 6 widgeta) -->
+                <!-- Desna kolona (Višeslojni Parallax Vizual) -->
                 <div class="hero-visual scroll-reveal" id="hero-visual-container">
-                    <!-- Glavna kartica (Mockup brauzera) -->
-                    <div class="browser-mockup" id="browser-tilt">
-                        <div class="browser-header">
-                            <span class="browser-dot dot-red"></span>
-                            <span class="browser-dot dot-yellow"></span>
-                            <span class="browser-dot dot-green"></span>
-                            <div class="browser-url">primeagency.rs</div>
-                        </div>
-                        <div class="browser-body">
-                            <!-- Webpage Preview (Verni prikaz agencijskog sajta sa referentne slike) -->
-                            <div class="webpage-preview">
-                                <!-- Heder preview-a -->
-                                <header class="preview-navbar">
-                                    <div class="preview-logo">
-                                        <span class="preview-logo-dot"></span>
-                                        <strong>PRIME AGENCY</strong>
-                                    </div>
-                                    <nav class="preview-nav-links">
-                                        <span class="active">Početna</span>
-                                        <span>Usluge</span>
-                                        <span>Portfolio</span>
-                                        <span>Kalkulator</span>
-                                        <span>Proces</span>
-                                        <span>FAQ</span>
-                                        <span>Kontakt</span>
-                                    </nav>
-                                    <div class="preview-navbar-btn">Zatraži Ponudu</div>
-                                </header>
-                                
-                                <!-- Sadržaj preview-a -->
-                                <div class="preview-hero-content">
-                                    <!-- Leva kolona (Tekst i CTA) -->
-                                    <div class="preview-hero-text">
-                                        <div class="preview-hero-badge">
-                                            <span class="badge-dot"></span>
-                                            <span>DIGITALNA REŠENJA KOJA DONOSE REZULTATE</span>
-                                        </div>
-                                        <h2 class="preview-hero-title">
-                                            Gradimo digitalna iskustva koja donose <span>stvarne rezultate.</span>
-                                        </h2>
-                                        <p class="preview-hero-subtitle">
-                                            Od dizajna do razvoja – sve što vam treba za jak online identitet i više klijenata.
-                                        </p>
-                                        <div class="preview-hero-btns">
-                                            <span class="preview-btn btn-blue">Zatraži Ponudu</span>
-                                            <span class="preview-btn btn-outline">Pogledaj Radove</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Desna kolona (Mini Laptop, Telefon i Trusted klijenti) -->
-                                    <div class="preview-hero-visual">
-                                        <div class="preview-mockups-wrapper">
-                                            <!-- Mini Laptop Mockup -->
-                                            <div class="preview-laptop">
-                                                <div class="preview-laptop-screen">
-                                                    <div class="preview-laptop-screen-content">
-                                                        <div class="preview-screen-glow"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="preview-laptop-keyboard"></div>
-                                            </div>
-                                            
-                                            <!-- Mini Telefon Mockup -->
-                                            <div class="preview-phone">
-                                                <div class="preview-phone-screen">
-                                                    <div class="preview-phone-home-indicator"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Trusted Sekcija -->
-                                        <div class="preview-trusted-box">
-                                            <div class="preview-avatar-group">
-                                                <span class="preview-avatar ava-1"></span>
-                                                <span class="preview-avatar ava-2"></span>
-                                                <span class="preview-avatar ava-3"></span>
-                                            </div>
-                                            <div class="preview-trusted-text">
-                                                <strong>50+</strong> satisfied clients
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Sloj 1: Glavni Browser (Pozadinski 3D Sloj) -->
+                    <div class="parallax-layer layer-browser" id="browser-tilt">
+                        <img src="assets/browser_main.webp" alt="Prime Agency Dashboard Preview" class="hero-main-img">
                     </div>
-
-                    <!-- Plutajući vidžet 1: Performance (gore levo) -->
-                    <div class="floating-widget widget-performance" id="widget-performance">
-                        <div class="widget-perf-circle">
-                            <svg viewBox="0 0 36 36" class="circular-chart-green">
-                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <text x="18" y="20.35" class="percentage">100</text>
-                                <text x="18" y="27" class="circle-lbl">Odlično</text>
-                            </svg>
-                        </div>
-                        <div class="widget-perf-list">
-                            <div class="perf-list-row"><span>Performance</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
-                            <div class="perf-list-row"><span>SEO</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
-                            <div class="perf-list-row"><span>Best Practices</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
-                            <div class="perf-list-row"><span>Mobile Friendly</span><div class="perf-bar"><div class="perf-fill" style="width: 100%;"></div></div><span class="perf-val">100</span></div>
-                        </div>
+                    
+                    <!-- Sloj 2: Plutajući vidžeti (Prednji 3D Parallax Slojevi) -->
+                    <div class="parallax-layer layer-widget widget-performance-layer" data-depth="0.12">
+                        <img src="assets/widget_performance.webp" alt="Performance Widget">
                     </div>
-
-                    <!-- Plutajući vidžet 2: Analytics (gore sredina) -->
-                    <div class="floating-widget widget-analytics" id="widget-analytics">
-                        <div class="widget-anal-header">
-                            <span>Analytics</span>
-                            <span class="widget-dropdown">Poslednjih 30 dana <i class="fa-solid fa-chevron-down"></i></span>
-                        </div>
-                        <div class="widget-anal-value">
-                            <div class="anal-main-val">
-                                <h3>8,842</h3>
-                                <p>Ukupni Posetioci</p>
-                            </div>
-                            <span class="trend-green"><i class="fa-solid fa-arrow-up" style="font-size: 8px;"></i> 24.6%</span>
-                        </div>
-                        <div class="widget-anal-chart">
-                            <svg viewBox="0 0 200 60" class="sparkline-svg">
-                                <defs>
-                                    <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35"/>
-                                        <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M 0 50 Q 20 40 40 45 T 80 20 T 120 30 T 160 10 T 200 25 L 200 60 L 0 60 Z" fill="url(#chart-grad)" />
-                                <path d="M 0 50 Q 20 40 40 45 T 80 20 T 120 30 T 160 10 T 200 25" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
+                    <div class="parallax-layer layer-widget widget-seo-layer" data-depth="0.15">
+                        <img src="assets/widget_seo_score.webp" alt="SEO Score Widget">
                     </div>
-
-                    <!-- Plutajući vidžet 3: SEO Score (gore desno) -->
-                    <div class="floating-widget widget-seo" id="widget-seo">
-                        <div class="widget-perf-circle">
-                            <svg viewBox="0 0 36 36" class="circular-chart-green">
-                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <text x="18" y="20.35" class="percentage">100</text>
-                                <text x="18" y="27" class="circle-lbl">Savršeno</text>
-                            </svg>
-                        </div>
-                        <div class="widget-seo-list">
-                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Meta Tagovi</span></div>
-                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Sitemap</span></div>
-                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Mobile Friendly</span></div>
-                            <div class="seo-row"><i class="fa-solid fa-circle-check"></i> <span>Core Web Vitals</span></div>
-                        </div>
+                    <div class="parallax-layer layer-widget widget-pagespeed-layer" data-depth="0.08">
+                        <img src="assets/widget_pagespeed.webp" alt="PageSpeed Widget">
                     </div>
-
-                    <!-- Plutajući vidžet 4: Brzina (dole levo) -->
-                    <div class="floating-widget widget-speed-badge" id="widget-speed-badge">
-                        <div class="widget-badge-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="widget-badge-content">
-                            <p class="badge-label">Brzina Učitavanja</p>
-                            <h3>&lt; 1.0s</h3>
-                            <p class="badge-status">Odlično</p>
-                        </div>
+                    <div class="parallax-layer layer-widget widget-conversion-layer" data-depth="0.18">
+                        <img src="assets/widget_conversion_rate.webp" alt="Conversion Rate Widget">
                     </div>
-
-                    <!-- Plutajući vidžet 5: Konverzija (desno sredina) -->
-                    <div class="floating-widget widget-conversion" id="widget-conversion">
-                        <div class="widget-conv-header">
-                            <span>Konverzija</span>
-                        </div>
-                        <div class="widget-conv-body">
-                            <h3>15.6%</h3>
-                            <span class="trend-green"><i class="fa-solid fa-arrow-up" style="font-size: 8px;"></i> 7.3%</span>
-                        </div>
-                        <div class="widget-conv-chart">
-                            <svg viewBox="0 0 100 25" class="sparkline-mini">
-                                <path d="M0 20 Q 20 15 40 18 T 80 5 T 100 12" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                        </div>
+                    <div class="parallax-layer layer-widget widget-backlinks-layer" data-depth="0.22">
+                        <img src="assets/widget_backlinks.webp" alt="Backlinks Widget">
                     </div>
-
-                    <!-- Plutajući vidžet 6: Uptime (dole desno) -->
-                    <div class="floating-widget widget-uptime" id="widget-uptime">
-                        <div class="widget-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="widget-badge-content">
-                            <p class="badge-label">Uptime & Sigurnost</p>
-                            <h3>99.9%</h3>
-                            <p class="badge-status">Uptime</p>
-                        </div>
+                    <div class="parallax-layer layer-widget widget-traffic-layer" data-depth="0.25">
+                        <img src="assets/widget_traffic.webp" alt="Traffic Overview Widget">
                     </div>
                 </div>
             </div>
